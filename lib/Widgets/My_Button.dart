@@ -1,3 +1,4 @@
+import 'package:ahmed_el_zaeem/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,10 +10,12 @@ class My_Button extends StatefulWidget {
   final Color textColor;
   final String buttonText;
   final bool enabled;
+  final bool hasGradient;
   final double? height;
   const My_Button(
       {required this.buttonText,
       this.enabled = true,
+      this.hasGradient = false,
       this.textPadding = 0,
       this.buttonRadius = 16,
       this.height,
@@ -35,6 +38,7 @@ class _My_ButtonState extends State<My_Button> {
         padding: EdgeInsets.symmetric(vertical: 16.h),
         alignment: Alignment.center,
         decoration: BoxDecoration(
+          gradient: widget.hasGradient ? linearGradientHorizntal : null,
           color: !widget.enabled
               ? Theme.of(context).colorScheme.onSurface
               : widget.buttonColor ?? Theme.of(context).colorScheme.primary,
@@ -49,7 +53,7 @@ class _My_ButtonState extends State<My_Button> {
               color: !widget.enabled
                   ? Theme.of(context).colorScheme.onBackground
                   : widget.textColor,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ),

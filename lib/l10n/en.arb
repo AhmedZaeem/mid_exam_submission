@@ -1,3 +1,11 @@
 {
- "@@locale": "en"
+ "@@locale": "en",
+ "onBoarding1" : "Fast reservation with technicians and craftsmen",
+ "next" : "Next",
+ "home": "Home",
+ "service" : "Service",
+ "order" : "Orders",
+ "user" : "User",
+ "more" : "More",
+ "selectService" : "Select Service"
 }

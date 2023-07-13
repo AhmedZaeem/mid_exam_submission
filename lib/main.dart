@@ -17,9 +17,11 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
-          theme: ThemeData.light().copyWith(
-            colorScheme: Theme.of(context).colorScheme.copyWith(),
-          ),
+          theme: ThemeData(
+              fontFamily: 'SpartanMB-Black',
+              colorScheme: Theme.of(context)
+                  .colorScheme
+                  .copyWith(primary: const Color(0xff0E9CF9))),
           debugShowCheckedModeBanner: false,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: const [Locale('en')],
